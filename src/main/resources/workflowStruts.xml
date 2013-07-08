@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="wsnframework" extends="json-default" namespace="/workflow">
+		<!-- 工作流模块 -->
+		<action name="*_*" class="/{1}" method="{2}" >
+			<result type="json" name="success">
+		   	  <param name="ignoreHierarchy">false</param>
+		   	  <param name="excludeNullProperties">true</param> 
+		   	  <param name="includeProperties">results.*</param>
+		    </result>
+		    <result name="workflowDefinitionList">/jsp/workflow/definition/workflowDefinitionList.jsp</result>
+		    <result name="workflowModelList">/jsp/workflow/model/workflowModelList.jsp</result>
+		    <result name="workflowInstanceList">/jsp/workflow/instance/workflowInstanceList.jsp</result>
+		    <result name="workflowTodoTaskList">/jsp/workflow/task/workflowTodoTaskList.jsp</result>
+		    <result name="newTaskList">/jsp/workflow/definition/newTaskList.jsp</result>
+		    <result name="workflowCompletedTaskList">/jsp/workflow/history/workflowCompletedTaskList.jsp</result>
+		    <result name="workflowActivityInstanceList">/jsp/workflow/history/workflowActivityIntanceList.jsp</result>
+		    <result name="workflowJobList">/jsp/workflow/job/workflowJobList.jsp</result>
+		    <result name="procdefGroupList">/jsp/workflow/procdefgroup/procdefGroupList.jsp</result>
+		    <result name="procdefGroupEdit"> /jsp/workflow/procdefgroup/procdefGroupEdit.jsp</result>
+		    <result name="userList">/jsp/workflow/user/userList.jsp</result>
+		    <result name="groupList">/jsp/workflow/group/groupList.jsp</result>
+		    <result name="membershipList">/jsp/workflow/membership/membershipList.jsp</result>
+		</action>
+	</package>
+</struts>    
