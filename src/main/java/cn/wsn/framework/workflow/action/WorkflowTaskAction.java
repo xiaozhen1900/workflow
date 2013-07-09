@@ -23,12 +23,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import cn.wsn.framework.action.BaseAction;
-import cn.wsn.framework.entity.User;
-import cn.wsn.framework.util.HttpSessionControl;
 import cn.wsn.framework.workflow.cache.WorkflowDefinitionCache;
 import cn.wsn.framework.workflow.util.Page;
 import cn.wsn.framework.workflow.util.PageUtil;
+
+import com.wsn.common.action.BaseAction;
+import com.wsn.common.entity.User;
+import com.wsn.common.util.HttpSessionControl;
 
 /**
  * @author guoqiang

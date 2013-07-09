@@ -10,13 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import cn.wsn.framework.action.BaseAction;
-import cn.wsn.framework.exception.WsnException;
 import cn.wsn.framework.workflow.dto.ProcdefGroupDto;
 import cn.wsn.framework.workflow.entity.ProcdefGroup;
 import cn.wsn.framework.workflow.service.IProcdefGroupService;
 import cn.wsn.framework.workflow.util.Page;
 import cn.wsn.framework.workflow.util.PageUtil;
+
+import com.wsn.common.action.BaseAction;
+import com.wsn.common.exception.WsnException;
 
 /**
  * @author guoqiang

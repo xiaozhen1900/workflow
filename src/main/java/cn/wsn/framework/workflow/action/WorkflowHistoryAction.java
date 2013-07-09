@@ -16,11 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import cn.wsn.framework.action.BaseAction;
-import cn.wsn.framework.util.HttpSessionControl;
 import cn.wsn.framework.workflow.service.IWorkflowHistoryService;
 import cn.wsn.framework.workflow.util.Page;
 import cn.wsn.framework.workflow.util.PageUtil;
+
+import com.wsn.common.action.BaseAction;
+import com.wsn.common.util.HttpSessionControl;
 
 /**
  * @author guoqiang
@@ -47,7 +48,7 @@ public class WorkflowHistoryAction extends BaseAction {
 		if(StringUtils.isNotEmpty(processInstanceId)) {
 			query = workflowHistoryServiceImpl.getActivityInstanceQuery(processInstanceId);
 		} else {
-			cn.wsn.framework.entity.User user = (cn.wsn.framework.entity.User) HttpSessionControl.get(HttpSessionControl.USER);
+			com.wsn.common.entity.User user = (com.wsn.common.entity.User) HttpSessionControl.get(HttpSessionControl.USER);
 			String userId = user.getAccountSet().iterator().next().getUserName();
 			boolean isCompleted = Boolean.valueOf(request.getParameter("isCompleted"));
 			query = workflowHistoryServiceImpl.getActivityInstanceQuery(userId, isCompleted);
@@ -70,7 +71,7 @@ public class WorkflowHistoryAction extends BaseAction {
 		if(StringUtils.isNotEmpty(processInstanceId)) {
 			query = workflowHistoryServiceImpl.getHistoricTaskInstanceQuery(processInstanceId);
 		} else {
-			cn.wsn.framework.entity.User user = (cn.wsn.framework.entity.User) HttpSessionControl.get(HttpSessionControl.USER);
+			com.wsn.common.entity.User user = (com.wsn.common.entity.User) HttpSessionControl.get(HttpSessionControl.USER);
 			String userId = user.getAccountSet().iterator().next().getUserName();
 			boolean isCompleted = Boolean.valueOf(request.getParameter("isCompleted"));
 			query = workflowHistoryServiceImpl.getHistoricTaskInstanceQuery(userId, isCompleted);

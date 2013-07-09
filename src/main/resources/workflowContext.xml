@@ -33,9 +33,9 @@
 
         <!-- 生成流程图的字体 -->
         <property name="activityFontName" value="宋体"/>
-        <!--  需要引入衍生版本-->
+        <!--  需要引入衍生版本
         <property name="labelFontName" value="宋体"/>
-		
+		-->
         <!-- 缓存支持
         <property name="processDefinitionCache">
             <bean class="cn.wsn.framework.workflow.cache.DistributedCache" />

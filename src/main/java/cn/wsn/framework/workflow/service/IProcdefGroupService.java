@@ -8,9 +8,10 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
-import cn.wsn.framework.exception.WsnException;
 import cn.wsn.framework.workflow.dto.ProcdefGroupDto;
 import cn.wsn.framework.workflow.entity.ProcdefGroup;
+
+import com.wsn.common.exception.WsnException;
 
 /**
  * @author guoqiang

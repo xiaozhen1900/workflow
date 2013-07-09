@@ -9,8 +9,9 @@ import java.util.List;
 
 import org.activiti.engine.repository.ProcessDefinition;
 
-import cn.wsn.framework.exception.WsnException;
 import cn.wsn.framework.workflow.util.Page;
+
+import com.wsn.common.exception.WsnException;
 
 /**
  * @author guoqiang

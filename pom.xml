@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.wsn.framework</groupId>
   <artifactId>workflow</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <version>1.0</version>
   <name>wsn workflow management system</name>
   <url>http://www.worldsensingnet.com</url>
   <developers>
@@ -282,17 +282,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>cn.wsn</groupId>
 			<artifactId>jsonrpc1</artifactId>
 			<version>1.0</version>
@@ -323,6 +312,16 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.0</version>
+		</dependency>
 
 		<!-- mysql驱动 -->
 		<dependency>
@@ -330,7 +329,16 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.24</version>
 		</dependency>
-
+		
+		<!-- wsncommon -->
+		<dependency>
+			<groupId>com.wsn.common</groupId>
+			<artifactId>wsncommon</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>d:/git/workflow/src/main/resources/WsnCommon.jar</systemPath>
+		</dependency>
+		
 		<!-- test -->
 		<dependency>
 			<groupId>junit</groupId>

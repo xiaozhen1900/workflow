@@ -12,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import cn.wsn.framework.action.BaseAction;
 import cn.wsn.framework.workflow.util.Page;
 import cn.wsn.framework.workflow.util.PageUtil;
 
 import com.opensymphony.xwork2.ActionContext;
+import com.wsn.common.action.BaseAction;
 
 /**
  * @author guoqiang
