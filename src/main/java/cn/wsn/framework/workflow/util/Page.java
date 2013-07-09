@@ -9,7 +9,7 @@ import com.google.common.collect.Lists;
 
 
 /**
- * @author HenryYan
+ * @author guoqiang
  */
 public class Page<T> {
 

@@ -66,7 +66,7 @@ public class WorkflowModelAction extends BaseAction {
 	 * 创建工作流模型
 	 * @return
 	 */
-	public String create() {
+	public void create() {
 		String key = request.getParameter("key");
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
@@ -77,7 +77,6 @@ public class WorkflowModelAction extends BaseAction {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return "edit";
 	}
 
 	/**
