@@ -282,11 +282,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>cn.wsn</groupId>
-			<artifactId>jsonrpc1</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
 			<groupId>net.sf.json-lib</groupId>
 			<artifactId>json-lib</artifactId>
 			<version>2.4</version>
@@ -330,13 +325,20 @@
 			<version>5.1.24</version>
 		</dependency>
 		
-		<!-- wsncommon -->
+		<!-- 目前没有私服，为了让项目能够在每个人的机器上跑起来只能用system scope来配置wsncommon和jsonrpc -->
 		<dependency>
 			<groupId>com.wsn.common</groupId>
 			<artifactId>wsncommon</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>d:/git/workflow/src/main/resources/WsnCommon.jar</systemPath>
+			<systemPath>${basedir}/src/main/resources/libs/WsnCommon.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>cn.wsn</groupId>
+			<artifactId>jsonrpc1</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/libs/jsonrpc1.jar</systemPath>
 		</dependency>
 		
 		<!-- test -->

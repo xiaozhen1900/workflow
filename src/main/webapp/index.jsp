@@ -90,7 +90,7 @@
 	}
 //-->
 </script>
-<body
+<body>
 <div class="workflow" style="width:100%;">
     <div class="layout-sidebar">
       <!--Sidebar content-->
