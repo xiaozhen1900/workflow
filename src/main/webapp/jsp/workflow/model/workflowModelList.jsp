@@ -22,10 +22,13 @@
     						$('#name').focus();
     						return;
     					}
-                        setTimeout(function() {
-                            location.reload();
-                        }, 1000);
+    					if (!$('#key').val()) {
+    						alert('请填写key！');
+    						$('#key').focus();
+    						return;
+    					}
     					$('#modelForm').submit();
+    					$('#createModelTemplate').dialog("close");
     				}
     			}]
     		});
@@ -81,29 +84,25 @@
 		</tbody>
 	</table>
 	<tags:pagination page="${page}" paginationSize="${page.pageSize}"/>
-	<div id="createModelTemplate" title="创建模型" class="template" style="display: none;">
-        <form id="modelForm" action="${ctx}/workflow/model_create.action" target="_blank" method="post">
-		<table>
-			<tr>
-				<td>名称：</td>
-				<td>
-					<input id="name" name="name" type="text" />
-				</td>
-			</tr>
-			<tr>
-				<td>KEY：</td>
-				<td>
-					<input id="key" name="key" type="text" />
-				</td>
-			</tr>
-			<tr>
-				<td>描述：</td>
-				<td>
-					<textarea id="description" name="description" style="width:300px;height: 50px;"></textarea>
-				</td>
-			</tr>
-		</table>
-        </form>
+	<div id="createModelTemplate" title="创建模型" class="template"
+		style="display: none;">
+		<form id="modelForm" action="${ctx}/workflow/model_create.action" target="_blank" method="post">
+			<table>
+				<tr>
+					<td>名称：</td>
+					<td><input id="name" name="name" type="text" /></td>
+				</tr>
+				<tr>
+					<td>KEY：</td>
+					<td><input id="key" name="key" type="text" /></td>
+				</tr>
+				<tr>
+					<td>描述：</td>
+					<td><textarea id="description" name="description"
+							style="width: 300px; height: 50px;"></textarea></td>
+				</tr>
+			</table>
+		</form>
 	</div>
 </body>
 </html>

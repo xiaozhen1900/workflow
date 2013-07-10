@@ -61,7 +61,7 @@ $(function() {
 				<div class="span3"
 					title="${results.processDefinitionList[index].description}">
 					<span class="img"></span> <span class="txt"> <strong><a
-							href="#" class="startWorkflow"
+							href="#" id="startWorkflow"
 							defId="${results.processDefinitionList[index].id}"
 							style="color: blue;">${results.processDefinitionList[index].name}</a></strong><br />
 						<li>${results.processDefinitionList[index].description}</li>
@@ -90,7 +90,7 @@ $(function() {
 					<div class="span3"
 						title="${results.processDefinitionList[index + 2].description}">
 						<span class="img"></span> <span class="txt"> <strong><a
-								href="#" id="startWorkflow"
+								href="#" class="startWorkflow"
 								defId="${results.processDefinitionList[index + 2].id}"
 								style="color: blue;">${results.processDefinitionList[index +
 									2].name}</a></strong><br />

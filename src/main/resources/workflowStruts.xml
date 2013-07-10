@@ -27,4 +27,15 @@
 		    <result name="membershipList">/jsp/workflow/membership/membershipList.jsp</result>
 		</action>
 	</package>
+	
+	<!-- 业务配置 -->
+	<package name="business" extends="json-default" namespace="/business">
+		<action name="*_*" class="/{1}" method="{2}" >
+			<result type="json" name="success">
+		   	  <param name="ignoreHierarchy">false</param>
+		   	  <param name="excludeNullProperties">true</param> 
+		   	  <param name="includeProperties">results.*</param>
+		    </result>
+		</action>
+	</package>
 </struts>    
