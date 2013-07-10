@@ -56,7 +56,7 @@ public class WorkflowDefinitionCache {
 			processDefinition = CACHE.get(processDefinitionId);
 		}
 		if(processDefinition == null) {
-			reload(processDefinitionId);
+			processDefinition = reload(processDefinitionId);
 		}
 		return processDefinition;
 	}
@@ -79,14 +79,15 @@ public class WorkflowDefinitionCache {
 		load();
 	}
 	
-	public static void load(String processDefinitionId) {
+	public static ProcessDefinition load(String processDefinitionId) {
 		ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionId(processDefinitionId).active().singleResult();
 		setWorkflowDefinition(processDefinitionId, processDefinition);
+		return processDefinition;
 	}
 	
-	public static void reload(String processDefinitionId) {
+	public static ProcessDefinition reload(String processDefinitionId) {
 		CACHE.remove(processDefinitionId);
-		load(processDefinitionId);
+		return load(processDefinitionId);
 	}
 	
 	@PreDestroy

@@ -38,7 +38,7 @@
 <script type="text/javascript">
 <!--
 $(function() {
-	$('#startWorkflow').click(function() {
+	$('#jsxmspbgb').click(function() {
 		var defId = $(this).attr('defId');
 		var url = "${ctx}/jsp/business/jsxmsp/jsxmspEdit.jsp?processDefinitionId="+defId;
 		$("#startWorkflowDiv").dialog({
@@ -61,7 +61,7 @@ $(function() {
 				<div class="span3"
 					title="${results.processDefinitionList[index].description}">
 					<span class="img"></span> <span class="txt"> <strong><a
-							href="#" id="startWorkflow"
+							href="#" id="${results.processDefinitionList[index].key}"
 							defId="${results.processDefinitionList[index].id}"
 							style="color: blue;">${results.processDefinitionList[index].name}</a></strong><br />
 						<li>${results.processDefinitionList[index].description}</li>
@@ -72,7 +72,7 @@ $(function() {
 					<div class="span3"
 						title="${results.processDefinitionList[index + 1].description}">
 						<span class="img"></span> <span class="txt"> <strong><a
-								href="#" class="startWorkflow"
+								href="#" id="${results.processDefinitionList[index + 1].key}"
 								defId="${results.processDefinitionList[index + 1].id}"
 								style="color: blue;">${results.processDefinitionList[index +
 									1].name}</a></strong><br />
@@ -90,7 +90,7 @@ $(function() {
 					<div class="span3"
 						title="${results.processDefinitionList[index + 2].description}">
 						<span class="img"></span> <span class="txt"> <strong><a
-								href="#" class="startWorkflow"
+								href="#" id="${results.processDefinitionList[index + 2].key}"
 								defId="${results.processDefinitionList[index + 2].id}"
 								style="color: blue;">${results.processDefinitionList[index +
 									2].name}</a></strong><br />
@@ -102,7 +102,7 @@ $(function() {
 					<div class="span3"
 						title="${results.processDefinitionList[index + 3].description}">
 						<span class="img"></span> <span class="txt"> <strong><a
-								href="#" class="startWorkflow"
+								href="#" id="${results.processDefinitionList[index + 3].key}"
 								defId="${results.processDefinitionList[index + 3].id}"
 								style="color: blue;">${results.processDefinitionList[index +
 									3].name}</a></strong><br />
