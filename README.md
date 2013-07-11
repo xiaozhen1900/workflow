@@ -4,7 +4,9 @@ workflow
 基于Activiti的工作流管理系统
 
 引用workflow的步骤
-1.拷贝src/main/webapp目录下的所有文件到对应工程目录下包括WEB-INF/目录下的web.xml，直接覆盖掉
+1.拷贝src/main/webapp目录下的jsp目录的所有文件拷贝到FireManagementAndemergencySystem对应的jsp目录下，
+把WEB-INF目录下的tags目录和web.xml，拷贝到FireManagementAndemergencySystem对应的WEB-INF目录下，web.xml直接覆盖掉
+把wsnJsFrameWork/plug目录下的所有文件夹拷贝到FireManagementAndemergencySystem对应的wsnJsFrameWork/plug目录下
 
 2.先把workflow打包成jar，然后放入工程的WEB-INF/lib目录下。
 
